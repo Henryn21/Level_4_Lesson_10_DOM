@@ -39,7 +39,8 @@
         //Select buttons by tagname
         //Use the index to get the first one
         //Use the className property to set a new class
-
+        let submitButton=document.querySelector("button");
+        submitButton.classList.add("submit");
 
 
         function generate(evt) {
@@ -47,23 +48,26 @@
             /*Exercise 4
             Give a value to the variables noun, verb, adjective, adverb by
             selecting each input tag by its id, and getting its value.*/
-          
+            noun=document.querySelector("#noun-input").value;
+            verb=document.querySelector("#verb-input").value;
+            adjective=document.querySelector("#adjective-input").value;
+            adverb=document.querySelector("#adverb-input").value;
 
 
 
 
             //Exercise 5
             //Call the display function
-            
+            display();
         }
         //Exercise 6 is in madlibs.js
 
         //Exercise 7
         //Use querySelector() to select the form by its tagname
-        
+        let madlibForm=document.querySelector("form");
         //Exercise 8
         //Add an event listener to call the generate function on the 'submit' event
-      
+        madlibForm.addEventListener("submit", generate);
 
     </script>
 </body>

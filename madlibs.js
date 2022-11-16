@@ -16,7 +16,8 @@ function display() {
     //Exercise 6
     //Get the p tag by its id
     //Change the inner HTML of the p tag to the madlib (var)
-   
+    let madlibPara= document.querySelector("#mad-lib");
+    madlibPara.innerHTML=madLib;
 
 
     //Bonus exercise: Show the inserted words with an underline
@@ -24,6 +25,9 @@ function display() {
     //Use the forEach() method to loop through the tags
     //Use setAttribute() method to apply class 'highlight'
    
-
+    let underlineMe=document.querySelectorAll("span");
+    underlineMe.forEach((element)=>{
+        element.classList.add("highlight");
+    })
 
 }
